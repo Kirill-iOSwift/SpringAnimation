@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AimationViewController.swift
 //  homeWorkSpringAnimation
 //
 //  Created by Кирилл on 24.07.2023.
@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-final class ViewController: UIViewController {
+final class AnimationViewController: UIViewController {
     
     //MARK: - IB Outlet
     
@@ -41,14 +41,14 @@ final class ViewController: UIViewController {
         
         springAnimationView.animate()
         
-        changeAnimation()
+        animation = Animation.getAnime()
         changeNameButtons()
     }
 }
 
 //MARK: - Private Methods
 
-private extension ViewController {
+private extension AnimationViewController {
     
     ///Метод применения анимации
     func isOnAnimation() {
@@ -57,16 +57,6 @@ private extension ViewController {
         springAnimationView.force = animation.force
         springAnimationView.duration = animation.duration
         springAnimationView.delay = animation.delay
-    }
-    
-    ///Метод изменения анимации
-    func changeAnimation() {
-        
-        animation.preset = AnimationPreset.allCases.randomElement()?.rawValue ?? ""
-        animation.curve = AnimationCurve.allCases.randomElement()?.rawValue ?? ""
-        animation.force = CGFloat.random(in: 1.1...2)
-        animation.duration = CGFloat.random(in: 0.5...1)
-        animation.delay = 0.3
     }
     
     ///Метод смены названий в леблах

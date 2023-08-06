@@ -10,12 +10,9 @@ import SpringAnimation
 
 class Animatica {
     
-    static let shared = Animatica()
-    
-    private init(){}
-    
     let preset = AnimationPreset.allCases
     let curve = AnimationCurve.allCases
     
-    
+    static let shared = Animatica()
+    private init(){}
 }

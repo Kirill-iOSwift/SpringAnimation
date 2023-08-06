@@ -1,5 +1,5 @@
 //
-//  modelSpringAnimation.swift
+//  Animation.swift
 //  homeWorkSpringAnimation
 //
 //  Created by Кирилл on 24.07.2023.
@@ -18,14 +18,14 @@ struct Animation {
     
     static func getAnime() -> Animation {
         
-        var animation = Animation(
-            preset: AnimationPreset.allCases.randomElement()?.rawValue ?? "",
-            curve: AnimationCurve.allCases.randomElement()?.rawValue ?? "",
+        Animation(
+            preset: Animatica.shared.preset.randomElement()?.rawValue ?? "",
+            curve: Animatica.shared.curve.randomElement()?.rawValue ?? "",
             force: CGFloat.random(in: 1.1...2),
             duration: CGFloat.random(in: 0.5...1),
             delay: 0.3
         )
-        return animation
+        
     }
 }
 
