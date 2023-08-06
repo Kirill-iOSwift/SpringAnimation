@@ -8,11 +8,11 @@
 import Foundation
 import SpringAnimation
 
-class Animatica {
+class DataManager {
     
     let preset = AnimationPreset.allCases
     let curve = AnimationCurve.allCases
     
-    static let shared = Animatica()
+    static let shared = DataManager()
     private init(){}
 }
